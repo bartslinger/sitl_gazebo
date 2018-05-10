@@ -7,3 +7,6 @@ models/iris/*.sdf
 *.pyc
 .*.sw?
 *-gen.sdf
+
+# QtCreator
+CMakeLists.txt.user
