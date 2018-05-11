@@ -122,7 +122,7 @@ void LocalVisionPlugin::OnUpdate(const common::UpdateInfo&)
     // Fill odom msg
     odom_msgs::msgs::odom odom_msg;
     odom_msg.set_usec(current_time.Double() * 1e6);
-    odom_msg.set_x(pose_model_world.Pos().X());
+    odom_msg.set_x(-pose_model_world.Pos().X());
     odom_msg.set_y(pose_model_world.Pos().Y());
     odom_msg.set_z(pose_model_world.Pos().Z());
     odom_msg.set_roll(pose_model_world.Rot().Roll());

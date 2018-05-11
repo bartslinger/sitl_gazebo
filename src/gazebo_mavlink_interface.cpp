@@ -530,7 +530,7 @@ void GazeboMavlinkInterface::ImuCallback(ImuPtr& imu_message) {
     y2 = x2 * w;
 
     // Apply 1 Pa RMS noise
-    float abs_pressure_noise = 1.0f * (float)w;
+    float abs_pressure_noise = 10.0f * (float)w;
     sensor_msg.abs_pressure += abs_pressure_noise;
 
     // convert to hPa
