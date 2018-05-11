@@ -135,7 +135,8 @@ void LocalVisionPlugin::OnUpdate(const common::UpdateInfo&)
     // Could be more accurate but this is meant to test kalman filter mode switching
     if (abs(pose_model_world.Pos().X()) < 2.0 &&
         abs(pose_model_world.Pos().Y()) < 2.0 &&
-        abs(pose_model_world.Pos().Z() < 5.0)) {
+        abs(pose_model_world.Pos().Z() < 5.0) &&
+        abs(pose_model_world.Pos().Z() > 0.1)) {
       // publish odom msg
       _pub_odom->Publish(odom_msg);
     }
